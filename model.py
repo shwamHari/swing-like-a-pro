@@ -15,7 +15,7 @@ class EventDetector(nn.Module):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         net = MobileNetV2(width_mult=width_mult)
-        state_dict_mobilenet = torch.load('mobilenet_v2.pth.tar', map_location=device)
+        state_dict_mobilenet = torch.load('models/mobilenet_v2.pth.tar', map_location=device)
         if pretrain:
             net.load_state_dict(state_dict_mobilenet)
 

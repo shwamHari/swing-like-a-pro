@@ -1,2 +1,6 @@
 __pycache__/
 *.tar
+*.pkl
+
+annotated_images/
+videos/
