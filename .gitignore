@@ -4,3 +4,7 @@ __pycache__/
 
 annotated_images/
 videos/
+
+combined_images/
+reference_event_frames/
+user_event_frames/
