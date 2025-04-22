@@ -56,7 +56,7 @@ COLUMN_GAP = 50  # Added gap between Simple Feedback and Detail columns
 
 # Define which angles to check for each event
 event_feedback_angles = {
-    'Address': ['shoulder_tilt', 'spine_angle', 'hip_rotation', 'left_knee_bend', 'right_knee_bend', 'left_elbow_angle', 'right_elbow_angle'],
+    'Address': ['spine_angle', 'left_knee_bend', 'right_knee_bend', 'left_elbow_angle', 'right_elbow_angle'],
     'Toe-up': ['shoulder_tilt', 'spine_angle', 'hip_rotation', 'left_knee_bend', 'right_knee_bend'],
     'Mid-backswing (arm parallel)': ['shoulder_tilt', 'spine_angle', 'hip_rotation', 'left_knee_bend', 'right_knee_bend'],
     'Top': ['shoulder_tilt', 'spine_angle', 'hip_rotation', 'left_knee_bend', 'right_knee_bend', 'left_elbow_angle'],
@@ -396,14 +396,14 @@ def generate_feedback_summary(feedback_data):
     downswing_events = ['Mid-downswing (arm parallel)', 'Impact', 'Mid-follow-through (shaft parallel)']
     excluded_events = ['Finish', 'Mid-follow-through (shaft parallel)']
 
-    # Backswing Trends (at least 3/4 events)
+    # Backswing Trends (at least 2/4 events)
     backswing_feedback = defaultdict(list)
     for event in backswing_events:
         if event in feedback_data:
             for simple in feedback_data[event]['simple']:
                 if simple != "Swing well-aligned":
                     backswing_feedback[simple].append(event)
-    backswing_trends = {fb: events for fb, events in backswing_feedback.items() if len(events) >= 3}
+    backswing_trends = {fb: events for fb, events in backswing_feedback.items() if len(events) >= 2}
 
     # Downswing Trends (at least 2/3 events)
     downswing_feedback = defaultdict(list)
@@ -532,7 +532,7 @@ if __name__ == '__main__':
 
         feedback_height = (len(simple_feedback) + 2) * FEEDBACK_LINE_HEIGHT
         canvas_h = TITLE_HEIGHT + max(user_h, ref_h) + feedback_height + 20
-        canvas_w = TEXT_AREA_WIDTH + user_w + GAP + ref_w + TEXT_AREA_WIDTH + (2 * FEEDBACK_COLUMN_WIDTH) + COLUMN_GAP
+        canvas_w = TEXT_AREA_WIDTH + user_w + GAP + ref_w + TEXT_AREA_WIDTH + COLUMN_GAP
         canvas = np.zeros((canvas_h, canvas_w, 3), dtype=np.uint8)
 
         title_text = f"Event: {event}"
