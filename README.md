@@ -2,6 +2,10 @@
 
 _A golf swing analysis system that compares your biomechanics with professional golfers using AI and computer vision._
 
+![Address Comparison](example_output/Address_comparison.jpg)
+![Top Comparison](example_output/Top_comparison.jpg)
+![Feedback Summary](example_output/feedback_summary.jpg)
+
 ## 🚀 Overview
 
 SwingLikeAPro helps golfers improve their technique by:
