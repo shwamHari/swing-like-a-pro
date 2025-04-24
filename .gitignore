@@ -2,9 +2,11 @@ __pycache__/
 *.tar
 *.pkl
 
-annotated_images/
 videos/
+data/
 
 combined_images/
 reference_event_frames/
 user_event_frames/
+
+preprocess_videos.py
