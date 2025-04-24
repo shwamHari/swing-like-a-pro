@@ -66,6 +66,6 @@ def preprocess_local_video(input_path, output_path, dim=160, start_frame=0, end_
 
 # Example usage
 if __name__ == '__main__':
-    input_video = 'zoom.mp4'         # 👈 Replace with your input file path
-    output_video = 'zoomp.mp4'       # 👈 Replace with your output path
-    preprocess_local_video(input_video, output_video, dim=160, rotate=False)
+    input_video = 'test_video.mp4'                  # 👈 Replace with your input file path
+    output_video = 'processed_test_video.mp4'       # 👈 Replace with your output path
+    preprocess_local_video(input_video, output_video, dim=400, rotate=True)
