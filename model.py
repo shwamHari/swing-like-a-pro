@@ -1,3 +1,14 @@
+"""
+model.py
+
+https://github.com/wmcnally/golfdb
+
+Implements the SwingNet architecture:
+1. MobileNetV2 backbone for spatial feature extraction
+2. LSTM for temporal sequence modeling
+3. Fully-connected layer for event classification
+"""
+
 import torch
 import torch.nn as nn
 from torch.autograd import Variable

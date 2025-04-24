@@ -1,3 +1,13 @@
+"""
+utils.py
+
+https://github.com/wmcnally/golfdb
+
+Provides data preprocessing utilities:
+- ToTensor: Convert numpy arrays to normalized PyTorch tensors
+- Normalize: Apply channel-wise mean/std normalization
+"""
+
 import torch
 
 class ToTensor(object):
@@ -18,16 +28,3 @@ class Normalize(object):
         images, labels = sample['images'], sample['labels']
         images.sub_(self.mean[None, :, None, None]).div_(self.std[None, :, None, None])
         return {'images': images, 'labels': labels}
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,9 +1,16 @@
+"""
+MobileNetV2.py
+
+https://github.com/tonylins/pytorch-mobilenet-v2
+
+Implements the MobileNetV2 architecture for feature extraction:
+- Inverted residual blocks with linear bottlenecks
+- Depth-wise separable convolutions
+- Expansion ratio-based channel scaling
+"""
+
 import torch.nn as nn
 import math
-
-"""
-https://github.com/tonylins/pytorch-mobilenet-v2
-"""
 
 def conv_bn(inp, oup, stride):
     return nn.Sequential(
