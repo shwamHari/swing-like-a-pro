@@ -8,32 +8,35 @@ _A golf swing analysis system that compares your biomechanics with professional 
 
 ## 🚀 Overview
 
-SwingLikeAPro helps golfers improve their technique by:
-- Detecting 8 key swing phases using LSTM neural networks
-- Analyzing 7 critical biomechanical angles via pose estimation
-- Providing actionable feedback comparing swings to professional references
-- Demonstrating proven results: **4.5m average distance gain** and **1.3m reduced shot curvature**
+SwingLikeAPro is designed to help golfers of all levels enhance their swing mechanics. By leveraging advanced AI and computer vision, it:
+- Automatically detects 8 key phases of your golf swing, from address to finish.
+- Analyzes 7 critical biomechanical angles to assess your form.
+- Provides personalized feedback and suggestions for improvement.
+- Offers visual comparisons with professional golfers' swings.
+- Demonstrates proven results, with users experiencing an average distance gain of 4.5 meters and a reduction in shot curvature by 1.3 meters.
 
 
 ## 🔍 Key Features
 
 ### 🎯 Swing Phase Detection
-Identifies 8 key swing events:
-1. Address
-2. Toe-up
-3. Mid-backswing
-4. Top
-5. Mid-downswing
-6. Impact
-7. Mid-follow-through
-8. Finish
+The system uses a sophisticated LSTM neural network to identify 8 critical events in your golf swing:
+1. **Address**: The starting position.
+2. **Toe-up**: When the club is parallel to the ground.
+3. **Mid-backswing**: Halfway through the backswing.
+4. **Top**: The peak of the backswing.
+5. **Mid-downswing**: Halfway through the downswing.
+6. **Impact**: The moment of ball contact.
+7. **Mid-follow-through**: After impact.
+8. **Finish**: The completion of the swing.
 
 ### 📐 Biomechanical Analysis
 Measures seven critical angles:
-```python
-['shoulder_tilt', 'hip_rotation', 'left_elbow', 'right_elbow',
- 'spine_angle', 'left_knee', 'right_knee']
-```
+- Shoulder tilt
+- Hip rotation
+- Left and right elbow angles
+- Spine angle
+- Left and right knee angles
+These measurements provide insights into your posture and movement efficiency.
 
 ### 📊 Smart Feedback System
 - Rule-based engine with 10° sensitivity threshold
@@ -94,6 +97,8 @@ Input Video (.mp4)
 Before running the analysis, it's important to preprocess the videos to ensure correct orientation and size. This avoids issues such as sideways videos or incorrect aspect ratios.
 
 Use the provided `preprocess_video.py` script on **both your swing video** and the **reference video**.
+
+**Note**: You may have to run this multiple times on a video, to ensure the processed video is upright.
 
 Edit the `__main__` section as needed
 ```bash
