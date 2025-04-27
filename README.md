@@ -3,8 +3,15 @@
 _A golf swing analysis system that compares your biomechanics with professional golfers using AI and computer vision._
 
 ![Address Comparison](example_output/Address_comparison.jpg)
+*Side-by-side swing comparison at the Address phase.*  
+
 ![Top Comparison](example_output/Top_comparison.jpg)
+*Side-by-side swing comparison at the Top phase.*  
+
 ![Feedback Summary](example_output/feedback_summary.jpg)
+*Personalized feedback to improve your swing mechanics.*  
+
+**Explore More Examples**: Dive into the [`example_output/`](./example_output/) directory to see additional swing comparisons, phase analyses, and detailed feedback reports showcasing how SwingLikeAPro can elevate your game!
 
 ## 🚀 Overview
 
@@ -14,7 +21,6 @@ SwingLikeAPro is designed to help golfers of all levels enhance their swing mech
 - Provides personalized feedback and suggestions for improvement.
 - Offers visual comparisons with professional golfers' swings.
 - Demonstrates proven results, with users experiencing an average distance gain of 4.5 meters and a reduction in shot curvature by 1.3 meters.
-
 
 ## 🔍 Key Features
 
